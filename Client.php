@@ -3,12 +3,14 @@
 class Client {
     protected string $_username;
     protected string $_name;
-    protected int $_nbrPersonn;
+    protected DateTime $_dateDebut;
+    protected DateTime $_dateFin;
 
-    public function __construct(string $username, string $name, int $nbrPersonn) {
+    public function __construct(string $username, string $name, string $dateDebut, string $dateFin) {
         $this->_username = $username;
         $this->_name = $name;
-        $this->_nbrPersonn = $nbrPersonn;
+        $this->_dateDebut = new DateTime($dateDebut);
+        $this->_dateFin = new DateTime($dateFin);
     }
 
 //GETTER
@@ -21,8 +23,12 @@ class Client {
         return $this->_name;
     }
 
-    public function getNbrPersonn() {
-        return $this->_nbrPersonn;
+    public function getDateDebut() {
+        return $this->_dateDebut;
+    }
+
+    public function getDateFin() {
+        return $this->_dateFin;
     }
 
 //SETTER
@@ -35,14 +41,18 @@ class Client {
         $this->_name = $NewName;
     }
 
-    public function setNbrPersonne(int $NewNbrPersonn) {
-        $this->_nbrPersonn = $NewNbrPersonn;
+    public function setDateDebut(DateTime $NewDateDebut) {
+        $this->_dateDebut = $NewDateDebut;
+    }
+
+    public function setDateFin(DateTime $NewDateFin) {
+        $this->_dateFin = $NewDateFin;
     }
 
 //TO STRING
 
     public function __toString() {
-        return $this->_username." ".$this->_name.", nombre de personnes à la reservation : ".$this->_nbrPersonn."<br><br>";
+        return $this->_username." ".$this->_name." - dates de réservations - du ".$this->getDateDebut()->format("d-M-Y")." au ".$this->getDateFin()->format("d-M-Y")."<br><br>";
     }
 
 
