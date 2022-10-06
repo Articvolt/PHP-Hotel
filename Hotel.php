@@ -9,8 +9,7 @@ class Hotel {
     public function __construct( string $name, string $adress, string $city) {
         $this->_name = $name;
         $this->_adress = $adress;
-        $this->_city;
-
+        $this->_city = $city;
     }
 
 //GETTER
@@ -41,4 +40,12 @@ class Hotel {
     public function setCity(string $NewCity) {
         $this->_city = $NewCity;
     }
+
+// TO STRING
+
+public function __toString() {
+    return $this->_name." situé à ".$this->_adress." ".$this->_city;
+}
+
+
 }
