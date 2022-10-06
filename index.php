@@ -39,5 +39,6 @@ $Regent = new Hotel("Regent ***", "61 rue Dauphine","75006 Paris");
 $John= new Client("John","Doe","15");
 
 echo $Hilton;
+
 echo $John;
 echo $Regent;
