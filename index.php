@@ -10,13 +10,13 @@
 <body>
     <header>
         <h1>POO Hotel</h1>
-    <p>A partir de ces captures d'écran, réaliser l'application en POO permettant la gestion de réservations de chambres par des clients dans différents hôtels:</p>
-    <div class="bloc-img">
-        <img src="img/hotel1.png" alt="">
-        <img src="img/hotel2.png" alt="">
-        <img src="img/hotel3.png" alt="">
-        <img src="img/hotel4.png" alt="">
-    </div>
+        <p>A partir de ces captures d'écran, réaliser l'application en POO permettant la gestion de réservations de chambres par des clients dans différents hôtels:</p>
+        <div class="bloc-img">
+            <img src="img/hotel1.png" alt="">
+            <img src="img/hotel2.png" alt="">
+            <img src="img/hotel3.png" alt="">
+            <img src="img/hotel4.png" alt="">
+        </div>
     </header>
     <main>
         <h2>Résultat</h2>
