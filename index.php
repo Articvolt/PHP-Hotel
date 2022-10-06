@@ -40,8 +40,14 @@ spl_autoload_register(function ($class_name) {  //fonction autoloader en PHP, fa
 $Hilton = new Hotel("Hilton **** Strasbourg","10 route de la gare","67000 STRASBOURG",40);
 $Regent = new Hotel("Regent *** Paris", "61 rue Dauphine","75006 PARIS",35);
 
+// CLIENT
 $John= new Client("John","DOE","15-01-2023","16-01-2023");
 
+// CHAMBRE
+$C12= new Chambre(12,2,150,true);
+
+// TEST
 echo $Hilton;
 echo $John;
 echo $Regent;
+echo $c12;
