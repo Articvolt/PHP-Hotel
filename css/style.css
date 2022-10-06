@@ -4,8 +4,6 @@
 }
 
 .bloc-img {
-    display: flex;
-    flex-direction: column;
     width: 400px;
     margin: 20px;
 }
@@ -19,4 +17,9 @@ h1 {
     align-items: center;
     padding: 30px;
     font-size: 50px;
+}
+
+h2 {
+    padding: 20px 0;
+    text-decoration: underline;
 }
