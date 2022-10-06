@@ -1,12 +1,14 @@
 <?php
 
     class Chambre {
+        private Hotel $_name;
         private int $_num;
         private int $_nbrBed;
         private bool $_wifi;
         private int $_price;
 
-        public function __construct(int $num, int $nbrBed, bool $wifi, int $price) {
+        public function __construct(Hotel $name, int $num, int $nbrBed, bool $wifi, int $price) {
+            $this->_name = $name;
             $this->_num= $num;
             $this->_nbrBed = $nbrBed;
             $this->_price = $price;
@@ -14,6 +16,10 @@
         }
 
         //GETTER
+
+        public function getName() {
+            return $this->_name;
+        }
 
         public function getNum() {
             return $this->_num;

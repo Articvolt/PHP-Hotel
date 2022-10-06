@@ -5,6 +5,7 @@ class Hotel {
     private string $_adress;
     private string $_city;
     private int $_nbrChambre;
+    private array $_chambre;
 
 
     public function __construct( string $name, string $adress, string $city, $nbrChambre) {
@@ -12,6 +13,7 @@ class Hotel {
         $this->_adress = $adress;
         $this->_city = $city;
         $this->_nbrChambre = $nbrChambre;
+        $this->_chambre= [];
     }
 
 //GETTER
@@ -56,5 +58,7 @@ class Hotel {
         return "<h2>".$this->_name."</h2><p>".$this->_adress." ".$this->_city."</p><p>Nombre de chambres : ".$this->_nbrChambre."</p><br><br>";
     }
 
-
+    public function AjouterChambre($NewChambre) {
+        $this->_chambre[] = $NewChambre;
+    }
 }
