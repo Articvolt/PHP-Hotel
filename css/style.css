@@ -31,3 +31,16 @@ h1 {
     text-decoration: underline;
     text-align: center;
 }
+
+.ennonce {
+    color: black;
+}
+
+p {
+    margin: 5px;
+    color: rgb(59, 58, 58);
+}
+
+h2 {
+    margin: 5px; 
+}

@@ -10,7 +10,7 @@
 <body>
     <header>
         <h1>POO Hotel</h1>
-        <p>A partir de ces captures d'écran, réaliser l'application en POO permettant la gestion de réservations de chambres par des clients dans différents hôtels:</p>
+        <p class="ennonce">A partir de ces captures d'écran, réaliser l'application en POO permettant la gestion de réservations de chambres par des clients dans différents hôtels:</p>
         <div class="img-flex" >
             <div class="bloc-img">
                 <img src="img/hotel1.png" alt="">
@@ -43,5 +43,5 @@ $Regent = new Hotel("Regent *** Paris", "61 rue Dauphine","75006 PARIS",35);
 $John= new Client("John","Doe","15");
 
 echo $Hilton;
-echo $John;
+// echo $John;
 echo $Regent;
