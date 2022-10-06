@@ -11,7 +11,7 @@ class Client {
         $this->_nbrPersonn = $nbrPersonn;
     }
 
-    //GETTER
+//GETTER
 
     public function getUsername() {
         return $this->_username;
@@ -25,7 +25,7 @@ class Client {
         return $this->_nbrPersonn;
     }
 
-    //SETTER
+//SETTER
 
     public function setUsername(string $NewUsername) {
         $this->_username = $NewUsername;
@@ -38,4 +38,12 @@ class Client {
     public function setNbrPersonne(int $NewNbrPersonn) {
         $this->_nbrPersonn = $NewNbrPersonn;
     }
+
+//TO STRING
+
+public function __toString() {
+    return $this->_username." ".$this->_name." ".$this->_nbrPersonn." personne";
+}
+
+
 }
