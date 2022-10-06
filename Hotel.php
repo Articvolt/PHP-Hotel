@@ -4,12 +4,14 @@ class Hotel {
     private string $_name;
     private string $_adress;
     private string $_city;
+    private int $_nbrChambre;
 
 
-    public function __construct( string $name, string $adress, string $city) {
+    public function __construct( string $name, string $adress, string $city, $nbrChambre) {
         $this->_name = $name;
         $this->_adress = $adress;
         $this->_city = $city;
+        $this->_nbrChambre = $nbrChambre;
     }
 
 //GETTER
@@ -25,7 +27,10 @@ class Hotel {
     public function getCity() {
         return $this->_city;
     }
-
+    
+    public function getNbrChambre() {
+        return $this->_nbrChambre;
+    }
 
 // SETTER
 
@@ -41,10 +46,14 @@ class Hotel {
         $this->_city = $NewCity;
     }
 
+    public function setNbrChambre(int $NewNbrChambre) {
+        $this->_nbrChambre = $NewNbrChambre;
+    }
+
 // TO STRING
 
 public function __toString() {
-    return $this->_name." situé à ".$this->_adress." ".$this->_city."<br><br>";
+    return "<h2>".$this->_name."</h2>".$this->_adress." ".$this->_city."<br>Nombre de chambres : ".$this->_nbrChambre."<br><br>";
 }
 
 
