@@ -44,7 +44,7 @@ class Hotel {
 // TO STRING
 
 public function __toString() {
-    return $this->_name." situé à ".$this->_adress." ".$this->_city;
+    return $this->_name." situé à ".$this->_adress." ".$this->_city."<br><br>";
 }
 
 

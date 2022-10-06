@@ -42,7 +42,7 @@ class Client {
 //TO STRING
 
 public function __toString() {
-    return $this->_username." ".$this->_name." ".$this->_nbrPersonn." personne";
+    return $this->_username." ".$this->_name." ".$this->_nbrPersonn." personne"."<br><br>";
 }
 
 
