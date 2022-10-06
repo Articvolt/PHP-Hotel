@@ -16,3 +16,15 @@
     <img src="img/hotel4.png" alt="">
 </body>
 </html>
+
+<?php
+
+spl_autoload_register(function ($class_name) {  //fonction autoloader en PHP, facilite quand plusieurs classes
+    require $class_name . '.php';
+});
+
+// HOTEL
+
+$Hilton = new Hotel("Hilton ****","10 route de la gare","67000 Strasbourg");
+$Regent = new Hotel("Regent ***", "61 rue Dauphine","75006 Paris");
+
