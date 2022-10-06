@@ -52,7 +52,7 @@ class Client {
 //TO STRING
 
     public function __toString() {
-        return $this->_username." ".$this->_name." - dates de réservations - du ".$this->getDateDebut()->format("d-M-Y")." au ".$this->getDateFin()->format("d-M-Y")."<br><br>";
+        return "<p>".$this->_username." ".$this->_name." - dates de réservations - du ".$this->getDateDebut()->format("d-M-Y")." au ".$this->getDateFin()->format("d-M-Y")."<p><br><br>";
     }
 
 

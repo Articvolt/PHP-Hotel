@@ -49,8 +49,7 @@
         // TO STRING
 
         public function __toString() {
-            return "La chambre ".$this->_num." possède ".$this->_nbrBed." lits (wifi : ".$this->getWifi()."<br>Coût de la nuit ".$this->_price." euros";
+            return "La chambre ".$this->_num." possède ".$this->_nbrBed." lits (".$this->getWifi().")<br>Coût de la nuit ".$this->_price." euros";
         }
-    
     }
         

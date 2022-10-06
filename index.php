@@ -50,4 +50,4 @@ $C12= new Chambre(12,2,150,true);
 echo $Hilton;
 echo $John;
 echo $Regent;
-echo $c12;
+echo $C12;
