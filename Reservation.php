@@ -7,11 +7,8 @@
 
         public function __construct(Hotel $hotel, Client $client, Chambre $chambre) {
             $this->_hotel = $hotel;
-            $hotel->AddReservation($this);
             $this->_client = $client;
-            $client->AddReservation($this);
             $this->_chambre = $chambre;
-            $chambre->AddReservation($this);
         }
 
         //GETTER
@@ -37,7 +34,4 @@
         }
 
         //FUNCTION
-        public function __toString() {
-            return "<h2>Réservations de ".$this->_client."</h2><strong>".$this->_hotel."</strong> - chambre ".$this->_chambre." du <br><br>";
-        }
     }

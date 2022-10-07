@@ -61,16 +61,23 @@ class Client {
         $this->_reservation[] = $NewReservation;
     }
     //affichage de la reservation du client
-    public function AfficherDateReservation() {
-        foreach ($this->_chambre as $chambre) {
-            echo $chambre->getInfoChambre();
+    public function afficherReservations() {
+        $result = "<h3>Réservations de $this</h3>";
+        $result .= count($this->reservations)." réservations.<br/>";
+        foreach($this->reservations as $resa) {
+            $result .= "$resa<br/>";
         }
-    }
-    public function afficherReservationClient() {
-        $result = "<h2>Reservations de ".$this->getUsername()." ".$this->getName()."</h2>";
-        foreach ($this->_reservation as $reservation) {
-            $result .= "<strong>".$reservation->getHotel()."</strong> / Chambre ".$reservation->getChambre()." ".$chambre->getInfoChambre();
+        return $result;
         }
-        return $result .= " - du ".$this->getDateDebut()->format("d-m-Y")." au ".$this->getDateFin()->format("d-m-Y");
+        
+    //affichage du nombre total de réservations
+    public function getTotalReservations() {
+        $total = 0;
+        foreach($this->reservations as $resa) {
+            $total += $resa->getNbJours() * $resa->getChambre()->getPrix();
+        }
+        return "Total : $total €<br/>";
+   
     }
+
 }
