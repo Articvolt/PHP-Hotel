@@ -54,7 +54,7 @@ class Client {
 //TO STRING
 
     public function __toString() {
-        return "<p>".$this->_username." ".$this->_name." - dates de réservations - du ".$this->getDateDebut()->format("d-M-Y")." au ".$this->getDateFin()->format("d-M-Y")."<p><br><br>";
+        return $this->_username." ".$this->_name;
     }
     //relie a la classe reservation
     public function AddReservation($NewReservation) {
@@ -64,8 +64,8 @@ class Client {
     public function afficherReservationClient() {
         $result = "<h2>Reservations de ".$this->getUsername()." ".$this->getName()."</h2>";
         foreach ($this->_reservation as $reservation) {
-            $result .= $reservation->getHotel()." / ".$reservation->getChambre();
+            $result .= "<strong>".$reservation->getHotel()."</strong> / Chambre ".$reservation->getChambre()." ".$this->getInfoChambre();
         }
-        return $result;
+        return $result .= " - du ".$this->getDateDebut()->format("d-m-Y")." au ".$this->getDateFin()->format("d-m-Y");
     }
 }

@@ -45,11 +45,11 @@ $John= new Client("John","DOE","15-01-2023","16-01-2023");
 $Jane= new Client("Jane","DOE","18-02-2023","24-02-2023");
 
 // CHAMBRE
-$C12= new Chambre($Hilton, 12, 2, true, 230);
-$C15= new Chambre($Hilton, 15, 1, true, 180);
+$C12= new Chambre($Hilton, "12", 2, true, 230);
+$C15= new Chambre($Hilton, "15", 1, true, 180);
 
 // RESERVATION
-$reservation = new Reservation($Hilton,$John,$C12);
+$reservation1 = new Reservation($Hilton,$John,$C12);
 
 // TEST
 echo $Hilton->AfficherHotel();
@@ -57,6 +57,7 @@ echo $John;
 echo $Regent->AfficherHotel();
 // echo $C12;
 // echo $C15;
-// echo $John->afficherReservationClient();
+echo $John->afficherReservationClient();
 // echo $Hilton->AfficherReservationHotel();
-echo $Hilton->AfficherListeChambre();
+// echo $Hilton->AfficherListeChambre();
+// echo $reservation1;

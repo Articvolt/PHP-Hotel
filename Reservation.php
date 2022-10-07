@@ -38,6 +38,6 @@
 
         //FUNCTION
         public function __toString() {
-            return $this->_hotel." a pour réservation la chambre ".$this->_chambre." au nom de ".$this->_client.".<br><br>";
+            return "<h2>Réservations de ".$this->_client."</h2><strong>".$this->_hotel."</strong> - chambre ".$this->_chambre." du <br><br>";
         }
     }

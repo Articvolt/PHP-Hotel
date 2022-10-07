@@ -2,13 +2,13 @@
 
     class Chambre {
         private Hotel $_name;
-        private int $_num;
+        private string $_num;
         private int $_nbrBed;
         private bool $_wifi;
         private int $_price;
         private array $_reservation;
 
-        public function __construct(Hotel $name, int $num, int $nbrBed, bool $wifi, int $price) {
+        public function __construct(Hotel $name, string $num, int $nbrBed, bool $wifi, int $price) {
             $this->_name = $name;
             $this->_num= $num;
             $this->_nbrBed = $nbrBed;
@@ -62,7 +62,7 @@
         // TO STRING
 
         public function __toString() {
-            return "La chambre ".$this->_num." (".$this->_name.") possède ".$this->_nbrBed." lits (".$this->getWifi()."). Prix : ".$this->_price." €<br><br>";
+            return $this->_num;
         }
         public function AddReservation($NewReservation) {
             $this->_reservation[] = $NewReservation;
@@ -70,6 +70,10 @@
 
         public function getListeChambre() {
             return "- Chambre ".$this->_num." : ".$this->_nbrBed." lits (".$this->getWifi().") | Prix : ".$this->_price." €<br>";
+        }
+        // informations complémentaires d'une chambre
+        public function getInfoChambre() {
+            return "(".$this->_nbrBed." lits - (".$this->getWifi().")";
         }
     }
     
