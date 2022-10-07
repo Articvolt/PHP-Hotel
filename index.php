@@ -42,6 +42,7 @@ $Regent = new Hotel("Regent *** Paris", "61 rue Dauphine","75006 PARIS",35);
 
 // CLIENT
 $John= new Client("John","DOE","15-01-2023","16-01-2023");
+$Jane= new Client("Jane","DOE","18-02-2023","24-02-2023");
 
 // CHAMBRE
 $C12= new Chambre($Hilton, 12, 2, true, 230);
