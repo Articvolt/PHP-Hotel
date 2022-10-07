@@ -6,6 +6,7 @@
         private int $_nbrBed;
         private bool $_wifi;
         private int $_price;
+        private array $_reservation;
 
         public function __construct(Hotel $name, int $num, int $nbrBed, bool $wifi, int $price) {
             $this->_name = $name;
@@ -13,6 +14,7 @@
             $this->_nbrBed = $nbrBed;
             $this->_price = $price;
             $this->_wifi = $wifi;
+            $this->_reservation = [];
         }
 
         //GETTER
@@ -60,6 +62,9 @@
 
         public function __toString() {
             return "La chambre ".$this->_num." (".$this->_name.") possède ".$this->_nbrBed." lits (".$this->getWifi()."). Prix : ".$this->_price." €<br><br>";
+        }
+        public function AddReservation($NewReservation) {
+            $this->_reservation[] = $NewReservation;
         }
     }
     

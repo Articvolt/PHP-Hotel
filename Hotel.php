@@ -6,6 +6,7 @@ class Hotel {
     private string $_city;
     private int $_nbrChambre;
     private array $_chambre;
+    private array $_reservation;
 
 
     public function __construct( string $name, string $adress, string $city, $nbrChambre) {
@@ -14,6 +15,7 @@ class Hotel {
         $this->_city = $city;
         $this->_nbrChambre = $nbrChambre;
         $this->_chambre= [];
+        $this->_reservation = [];
     }
 
 //GETTER
@@ -57,12 +59,14 @@ class Hotel {
     public function AfficherHotel() {
         return "<h2>".$this->_name."</h2><p>".$this->_adress." ".$this->_city."</p><p>Nombre de chambres : ".$this->_nbrChambre."</p><br><br>";
     }
-
+    public function __toString() {
+            return $this->_name;
+        }
+    //relier les différentes classes
     public function AjouterChambre($NewChambre) {
         $this->_chambre[] = $NewChambre;
     }
-
-    public function __toString() {
-        return $this->_name;
+    public function AddReservation($NewReservation) {
+        $this->_reservation[] = $NewReservation;
     }
 }
