@@ -40,6 +40,9 @@
             $this->_dateFin = $NewDateFin;
         }
 
-        
+
         //FUNCTION
+        public function __toString(){
+            return "<strong>Hotel : ". $this->_chambre->getHotel()."</strong> / Chambre : ".$this->_chambre. " du ".$this->_dateDebut->format("d-m-Y")." au ".$this->_dateFin->format("d-m-Y");  
+        }
     }

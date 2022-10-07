@@ -49,6 +49,5 @@ $C12= new Chambre($Hilton, "12", 2, true, 230);
 $C15= new Chambre($Hilton, "15", 1, true, 180);
 
 // RESERVATION
-$reservation1 = new Reservation($Hilton,$John,$C12);
 
 // TEST
