@@ -37,7 +37,7 @@
         public function getPrice() {
             return $this->_price;
         }
-        // SETTER
+        // SETTER=
 
         public function setName(string $NewName) {
             $this->_name = $NewName;
@@ -49,13 +49,13 @@
         public function setNbrBed(int $NewNbrBed) {
             $this->_nbrBed = $NewNbrBed;
         }
-        public function setPrice(int $NewPrice) {
-            $this->_price = $NewPrice;
-        }
         public function setWifi(bool $NewWifi) {
             $this->_wifi = $NewWifi;
         }
-
+        public function setPrice(string $NewPrice) {
+            $this->_price = $NewPrice;
+        }
+        
         // TO STRING
 
         public function __toString() {

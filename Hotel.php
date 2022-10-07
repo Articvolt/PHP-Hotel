@@ -54,11 +54,15 @@ class Hotel {
 
 // TO STRING
 
-    public function __toString() {
+    public function AfficherHotel() {
         return "<h2>".$this->_name."</h2><p>".$this->_adress." ".$this->_city."</p><p>Nombre de chambres : ".$this->_nbrChambre."</p><br><br>";
     }
 
     public function AjouterChambre($NewChambre) {
         $this->_chambre[] = $NewChambre;
+    }
+
+    public function __toString() {
+        return $this->_name;
     }
 }
