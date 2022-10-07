@@ -60,4 +60,12 @@ class Client {
     public function AddReservation($NewReservation) {
         $this->_reservation[] = $NewReservation;
     }
+    //affichage de la reservation du client
+    public function afficherReservationClient() {
+        $result = "<h2>Reservations de ".$this->getUsername()." ".$this->getName()."</h2>";
+        foreach ($this->_reservation as $reservation) {
+            $result .= $reservation->getHotel()." / ".$reservation->getChambre();
+        }
+        return $result;
+    }
 }
