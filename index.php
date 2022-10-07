@@ -44,7 +44,7 @@ $Regent = new Hotel("Regent *** Paris", "61 rue Dauphine","75006 PARIS",35);
 $John= new Client("John","DOE","15-01-2023","16-01-2023");
 
 // CHAMBRE
-$C12= new Chambre(12,2,150,true);
+$C12= new Chambre($Hilton,12,2,150,true);
 
 // TEST
 echo $Hilton;

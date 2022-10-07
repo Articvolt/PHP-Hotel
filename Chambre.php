@@ -39,6 +39,10 @@
         }
         // SETTER
 
+        public function setName(string $NewName) {
+            $this->_name = $NewName;
+        }
+
         public function setNum(int $NewNum) {
             $this->_num = $NewNum;
         }
@@ -55,7 +59,7 @@
         // TO STRING
 
         public function __toString() {
-            return "La chambre ".$this->_num." possède ".$this->_nbrBed." lits (".$this->getWifi().")<br>Coût de la nuit ".$this->_price." euros";
+            return "La chambre ".$this->_num." (".$this->_name.") possède ".$this->_nbrBed." lits (".$this->getWifi().")<br>Coût de la nuit ".$this->_price." euros";
         }
     }
         
