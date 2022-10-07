@@ -76,4 +76,10 @@ class Hotel {
         }
         return $result;
     }
+    
+    public function AfficherListeChambre() {
+        foreach($this->_chambre as $chambre) {
+            echo $chambre->getListeChambre()."<br>";
+        }
+    }
 }

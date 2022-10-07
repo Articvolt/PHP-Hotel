@@ -47,11 +47,15 @@ $John= new Client("John","DOE","15-01-2023","16-01-2023");
 $C12= new Chambre($Hilton, 12, 2, true, 230);
 $C15= new Chambre($Hilton, 15, 1, true, 180);
 
+// RESERVATION
+$reservation = new Reservation($Hilton,$John,$C12);
+
 // TEST
 echo $Hilton->AfficherHotel();
 echo $John;
 echo $Regent->AfficherHotel();
-echo $C12;
-echo $C15;
-echo $John->afficherReservationClient();
-echo $Hilton->AfficherReservationHotel();
+// echo $C12;
+// echo $C15;
+// echo $John->afficherReservationClient();
+// echo $Hilton->AfficherReservationHotel();
+echo $Hilton->AfficherListeChambre();

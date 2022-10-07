@@ -15,7 +15,6 @@
         }
 
         //GETTER
-
         public function getHotel() {
             return $this->_hotel;
         }
@@ -38,7 +37,6 @@
         }
 
         //FUNCTION
-
         public function __toString() {
             return $this->_hotel." a pour réservation la chambre ".$this->_chambre." au nom de ".$this->_client.".<br><br>";
         }

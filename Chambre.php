@@ -15,6 +15,7 @@
             $this->_price = $price;
             $this->_wifi = $wifi;
             $this->_reservation = [];
+
         }
 
         //GETTER
@@ -65,6 +66,10 @@
         }
         public function AddReservation($NewReservation) {
             $this->_reservation[] = $NewReservation;
+        }
+
+        public function getListeChambre() {
+            return "- Chambre ".$this->_num." : ".$this->_nbrBed." lits (".$this->getWifi().") | Prix : ".$this->_price." €<br>";
         }
     }
     
