@@ -69,12 +69,13 @@ class Hotel {
     public function AddReservation($NewReservation) {
         $this->_reservation[] = $NewReservation;
     }
+    //affichage reservations d'un hotel
     public function afficherReservationHotel() {
-        $result = "<h2>Reservations de l'hôtel ".$this->getName()."</h2>";
+        $result = "<h2>".$this->_name."</h2>";
         foreach ($this->_reservation as $reservation) {
-            $result .= $reservation->getClient()." / ".$reservation->getChambre();
+            $result .= $reservation->getClient()." - Chambre ".$reservation->getChambre();
         }
-        return $result;
+        return $result .= " - du ".$this->getDateDebut()->format("d-m-Y")." au ".$this->getDateFin()->format("d-m-Y");
     }
     
     public function AfficherListeChambre() {
