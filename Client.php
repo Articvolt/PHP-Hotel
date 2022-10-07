@@ -61,10 +61,15 @@ class Client {
         $this->_reservation[] = $NewReservation;
     }
     //affichage de la reservation du client
+    public function AfficherDateReservation() {
+        foreach ($this->_chambre as $chambre) {
+            echo $chambre->getInfoChambre();
+        }
+    }
     public function afficherReservationClient() {
         $result = "<h2>Reservations de ".$this->getUsername()." ".$this->getName()."</h2>";
         foreach ($this->_reservation as $reservation) {
-            $result .= "<strong>".$reservation->getHotel()."</strong> / Chambre ".$reservation->getChambre()." ".$this->getInfoChambre();
+            $result .= "<strong>".$reservation->getHotel()."</strong> / Chambre ".$reservation->getChambre()." ".$chambre->getInfoChambre();
         }
         return $result .= " - du ".$this->getDateDebut()->format("d-m-Y")." au ".$this->getDateFin()->format("d-m-Y");
     }

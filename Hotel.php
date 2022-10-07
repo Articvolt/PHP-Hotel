@@ -75,7 +75,7 @@ class Hotel {
         foreach ($this->_reservation as $reservation) {
             $result .= $reservation->getClient()." - Chambre ".$reservation->getChambre();
         }
-        return $result .= " - du ".$this->getDateDebut()->format("d-m-Y")." au ".$this->getDateFin()->format("d-m-Y");
+        return $result .= " - du ".$chambre->getDateDebut()->format("d-m-Y")." au ".$chambre->getDateFin()->format("d-m-Y");
     }
     
     public function AfficherListeChambre() {
