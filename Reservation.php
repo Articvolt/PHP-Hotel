@@ -11,6 +11,9 @@
             $this->_chambre = $chambre;
             $this->_dateDebut = new DateTime($dateDebut);
             $this->_dateFin = new DateTime($dateFin);
+            $hotel = $chambre->getHotel();
+            $hotel->ajouterReservation($this);
+            $client->ajouterReservation($this);
         }
 
         //GETTER
@@ -41,7 +44,7 @@
         }
 
 
-        //FUNCTION
+        //TO STRING
         public function __toString(){
             return "<strong>Hotel : ". $this->_chambre->getHotel()."</strong> / Chambre : ".$this->_chambre. " du ".$this->_dateDebut->format("d-m-Y")." au ".$this->_dateFin->format("d-m-Y");  
         }

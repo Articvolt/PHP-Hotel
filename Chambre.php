@@ -39,7 +39,7 @@
         public function getPrice() {
             return $this->_price;
         }
-        // SETTER=
+        //SETTER=
 
         public function setHotel(string $NewHotel) {
             $this->_name = $NewHotel;
@@ -58,9 +58,9 @@
             $this->_price = $NewPrice;
         }
         
-        // TO STRING
-        public function __toString(){
-            return $this->_num." (".$this->_nbrBed." lits - ".$this->_price." € - Wifi : $_wifi)";
+        //TO STRING
+        public function __toString() {
+            return $this->_num." (".$this->_nbrBed." lits - ".$this->_price." € - Wifi : ".$this->_wifi;
         }
     }
     // raccourcis clavier 0128 + Alt : €

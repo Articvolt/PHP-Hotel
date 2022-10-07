@@ -35,7 +35,7 @@ class Hotel {
         return $this->_adress . $this->_city;
     }
 
-    // SETTER
+    //SETTER
     public function setName(string $NewName) {
         $this->_name = $NewName;
     }
@@ -48,8 +48,11 @@ class Hotel {
     public function setNbrChambre(int $NewNbrChambre) {
         $this->_nbrChambre = $NewNbrChambre;
     }
-    // TO STRING
 
+    //TO STRING
+    public function __toString(){
+        return $this->_name;
+    }
 
     //FONCTIONS
     public function ajouterChambre(Chambre $c) {

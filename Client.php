@@ -11,7 +11,7 @@ class Client {
         $this->_reservation = [];
     }
 
-//GETTER
+    //GETTER
     public function getUsername() {
         return $this->_username;
     }
@@ -19,7 +19,7 @@ class Client {
         return $this->_name;
     }
 
-//SETTER
+    //SETTER
     public function setUsername(string $NewUsername) {
         $this->_username = $NewUsername;
     }
@@ -33,7 +33,7 @@ class Client {
         return "$this->_username $this->_name";
     }
 
-    // FONCTIONS
+    //FONCTIONS
     public function ajouterReservation(Reservation $r) {
         $this->reservations[] = $r;
     }
