@@ -59,7 +59,8 @@
         // TO STRING
 
         public function __toString() {
-            return "La chambre ".$this->_num." (".$this->_name.") possède ".$this->_nbrBed." lits (".$this->getWifi().")<br>Coût de la nuit ".$this->_price." euros";
+            return "La chambre ".$this->_num." (".$this->_name.") possède ".$this->_nbrBed." lits (".$this->getWifi()."). Prix : ".$this->_price." €<br><br>";
         }
     }
-        
+    
+    // raccourcis clavier 0128 + Alt : €
