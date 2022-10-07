@@ -32,4 +32,9 @@ class Client {
     public function __toString(){
         return "$this->_username $this->_name";
     }
+
+    // FONCTIONS
+    public function ajouterReservation(Reservation $r) {
+        $this->reservations[] = $r;
+    }
 }

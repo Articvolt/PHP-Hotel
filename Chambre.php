@@ -8,7 +8,7 @@
         private float $_price;
         private array $_reservation;
 
-        public function __construct(Hotel $hotel, string $num, int $nbrBed, bool $wifi = true, int $price) {
+        public function __construct(Hotel $hotel, string $num, int $nbrBed, bool $wifi, int $price) {
             $this->_name = $hotel;
             $this->_num= $num;
             $this->_nbrBed = $nbrBed;
@@ -59,6 +59,8 @@
         }
         
         // TO STRING
-
+        public function __toString(){
+            return $this->_num." (".$this->_nbrBed." lits - ".$this->_price." € - Wifi : $_wifi)";
+        }
     }
     // raccourcis clavier 0128 + Alt : €

@@ -18,42 +18,45 @@ class Hotel {
         $this->_reservation = [];
     }
 
-//GETTER
-
+    //GETTER
     public function getName() {
         return $this->_name;
     }
-
     public function getAdress() {
         return $this->_adress;
     }
-
     public function getCity() {
         return $this->_city;
-    }
-    
+    } 
     public function getNbrChambre() {
         return $this->_nbrChambre;
     }
+    public function getAdresse() {
+        return $this->_adress . $this->_city;
+    }
 
-// SETTER
-
+    // SETTER
     public function setName(string $NewName) {
         $this->_name = $NewName;
     }
-
     public function setAdress(string $NewAdress) {
         $this->_adress = $NewAdress;
     }
-
     public function setCity(string $NewCity) {
         $this->_city = $NewCity;
     }
-
     public function setNbrChambre(int $NewNbrChambre) {
         $this->_nbrChambre = $NewNbrChambre;
     }
+    // TO STRING
 
-// TO STRING
 
+    //FONCTIONS
+    public function ajouterChambre(Chambre $c) {
+        $this->chambres[] = $c;
+    }
+
+    public function ajouterReservation(Reservation $r) {
+        $this->reservations[] = $r;
+    }
 }
