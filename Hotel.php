@@ -69,4 +69,11 @@ class Hotel {
     public function AddReservation($NewReservation) {
         $this->_reservation[] = $NewReservation;
     }
+    public function afficherReservationHotel() {
+        $result = "<h2>Reservations de l'hôtel ".$this->getName()."</h2>";
+        foreach ($this->_reservation as $reservation) {
+            $result .= $reservation->getClient()." / ".$reservation->getChambre();
+        }
+        return $result;
+    }
 }

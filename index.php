@@ -54,3 +54,4 @@ echo $Regent->AfficherHotel();
 echo $C12;
 echo $C15;
 echo $John->afficherReservationClient();
+echo $Hilton->AfficherReservationHotel();
