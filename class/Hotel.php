@@ -1,78 +1,81 @@
 <?php
 
 class Hotel {
-    private string $_name;
-    private string $_adress;
-    private string $_city;
-    private int $_nbrChambre;
-    private array $_chambre;
-    private array $_reservations;
+    private string $name;
+    private string $adress;
+    private string $city;
+    private int $nbrChambre;
+    private array $chambres;
+    private array $reservations;
 
 
     public function __construct( string $name, string $adress, string $city, $nbrChambre) {
-        $this->_name = $name;
-        $this->_adress = $adress;
-        $this->_city = $city;
-        $this->_nbrChambre = $nbrChambre;
-        $this->_chambre= [];
-        $this->_reservations = [];
+        $this->name = $name;
+        $this->adress = $adress;
+        $this->city = $city;
+        $this->nbrChambre = $nbrChambre;
+        $this->chambres= [];
+        $this->reservations = [];
     }
 
     //GETTER
     public function getName() {
-        return $this->_name;
+        return $this->name;
     }
     public function getAdress() {
-        return $this->_adress;
+        return $this->adress;
     }
     public function getCity() {
-        return $this->_city;
+        return $this->city;
     } 
     public function getNbrChambre() {
-        return $this->_nbrChambre;
+        return $this->nbrChambre;
     }
     public function getAdresse() {
-        return $this->_adress . $this->_city;
+        return $this->adress . $this->city;
     }
 
 
     public function getReservation() {
         return $this->reservations;
     }
-    public static function getChambre() {
-        return self::$_chambre;
+    public static function getChambres() {
+        return self::$chambres;
     }
 
     //SETTER
     public function setName(string $NewName) {
-        $this->_name = $NewName;
+        $this->name = $NewName;
     }
     public function setAdress(string $NewAdress) {
-        $this->_adress = $NewAdress;
+        $this->adress = $NewAdress;
     }
     public function setCity(string $NewCity) {
-        $this->_city = $NewCity;
+        $this->city = $NewCity;
     }
     public function setNbrChambre(int $NewNbrChambre) {
-        $this->_nbrChambre = $NewNbrChambre;
+        $this->nbrChambre = $NewNbrChambre;
     }
 
     //TO STRING
     public function __toString(){
-        return $this->_name;
+        return $this->name;
     }
     
     // Ajouter chambre à l'hotel
-    public function AjouterChambres($NewChambre) {
-        $this->_chambre[] =$NewChambre;
+    public function AjouterChambres($chambre) {
+        $this->chambres[] =$chambre;
     } 
+    public function AjouterReservation($reservation){
+        $this->reservations[]= $reservation;
+    }
 
     public function AfficherReservationsHotel() {
-        $result = "<h2> Reservations de l'hôtel ". $this->_name."</h2>";
-        foreach ($this->_reservations as $reservations) {
-            $result .= $reservations->getClient()." ".$reservations->getChambre();
+        echo "<h2> Reservations de l'hôtel ". $this->name."</h2>";
+        foreach ($this->reservations as $reservation) {
+            return $reservation->getClient()." ".$reservation->getChambre();
         }
-        return $result;
+        
     } 
 
 }

@@ -1,43 +1,47 @@
 <?php
 
 class Client {
-    protected string $_username;
-    protected string $_name;
-    private array $_reservations;
+    protected string $username;
+    protected string $name;
+    private array $reservations;
 
     public function __construct(string $username, string $name) {
-        $this->_username = $username;
-        $this->_name = $name;
-        $this->_reservations = [];
+        $this->username = $username;
+        $this->name = $name;
+        $this->reservations = [];
     }
 
     //GETTER
     public function getUsername() {
-        return $this->_username;
+        return $this->username;
     }
     public function getName() {
-        return $this->_name;
+        return $this->name;
     }
 
     //SETTER
     public function setUsername(string $NewUsername) {
-        $this->_username = $NewUsername;
+        $this->username = $NewUsername;
     }
 
     public function setName(string $NewName) {
-        $this->_name = $NewName;
+        $this->name = $NewName;
     }
 
     //TO STRING
     public function __toString() {
-        return "$this->_username $this->_name";
+        return "$this->username $this->name";
     }
 
     //FONCTIONS
 
-    public function AfficherReservation() {
+    public function AjouterReservation($reservation){
+        $this->reservations[]= $reservation;
+    }
+
+    public function AfficherReservationClient() {
         $result = "<h2> Réservation de ".$this->getUsername()." ".$this->getName()."</h2> ";
-        foreach ($this->_reservations as $reservations) {
+        foreach ($this->reservations as $reservations) {
             $result .= $reservations->getChambre(); 
         }
         return $result;
