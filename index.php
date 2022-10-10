@@ -41,12 +41,12 @@ $Hilton = new Hotel("Hilton **** Strasbourg","10 route de la gare","67000 STRASB
 $Regent = new Hotel("Regent *** Paris", "61 rue Dauphine","75006 PARIS",35);
 
 // CLIENT
-$John= new Client("John","DOE","15-01-2023","16-01-2023");
-$Jane= new Client("Jane","DOE","18-02-2023","24-02-2023");
+$John= new Client("Micka","MURMANN","15-01-2023","16-01-2023");
+$Jane= new Client("Virgile","GIBELLO","18-02-2023","24-02-2023");
 
 // CHAMBRE
-$C12= new Chambre($Hilton, "12", 2, TRUE, 230);
-$C15= new Chambre($Hilton, "15", 1, TRUE, 180);
+$C12= new Chambre($Hilton, "3", 2, TRUE, 120);
+$C15= new Chambre($Hilton, "4", 1, TRUE, 120);
 
 // RESERVATION
 
