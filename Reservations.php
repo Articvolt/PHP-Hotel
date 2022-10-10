@@ -1,6 +1,7 @@
 <?php
+// Collection -> mettre toujours au pluriel
 
-    class Reservation {
+    class Reservations {
         private Client $_client;
         private Chambre $_chambre;
         private DateTime $_dateDebut;

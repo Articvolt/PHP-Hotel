@@ -1,12 +1,14 @@
 <?php
 
     class Chambre {
+
+
         private Hotel $_hotel;
         private int $_num;
         private int $_nbrBed;
         private bool $_wifi;
         private float $_price;
-        private array $_reservation;
+        private array $_reservations;
 
         public function __construct(Hotel $hotel, string $num, int $nbrBed, bool $wifi, int $price) {
             $this->_name = $hotel;
@@ -14,7 +16,7 @@
             $this->_nbrBed = $nbrBed;
             $this->_price = $price;
             $this->_wifi = $wifi;
-            $this->_reservation = [];
+            $this->_reservations = [];
         }
 
         //GETTER
@@ -59,7 +61,7 @@
         
         //TO STRING
         public function __toString() {
-            return $this->_num." (".$this->_nbrBed." lits - ".$this->_price." € - Wifi : ".$this->_wifi.")";
+            return $this->_num." (".$this->_nbrBed." lits - ".$this->_price." € - Wifi : ".$this->getWifi().")";
         }
     }
     // raccourcis clavier 0128 + Alt : €

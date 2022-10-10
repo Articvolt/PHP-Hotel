@@ -3,12 +3,12 @@
 class Client {
     protected string $_username;
     protected string $_name;
-    private array $_reservation;
+    private array $_reservations;
 
     public function __construct(string $username, string $name) {
         $this->_username = $username;
         $this->_name = $name;
-        $this->_reservation = [];
+        $this->_reservations = [];
     }
 
     //GETTER
@@ -34,5 +34,5 @@ class Client {
     }
 
     //FONCTIONS
-    
+
 }

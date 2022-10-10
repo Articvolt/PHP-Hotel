@@ -6,7 +6,7 @@ class Hotel {
     private string $_city;
     private int $_nbrChambre;
     private array $_chambre;
-    private array $_reservation;
+    private array $_reservations;
 
 
     public function __construct( string $name, string $adress, string $city, $nbrChambre) {
@@ -15,7 +15,7 @@ class Hotel {
         $this->_city = $city;
         $this->_nbrChambre = $nbrChambre;
         $this->_chambre= [];
-        $this->_reservation = [];
+        $this->_reservations = [];
     }
 
     //GETTER
