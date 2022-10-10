@@ -52,6 +52,8 @@ $C15= new Chambre($Hilton, "15", 1, TRUE, 180);
 
 // TEST
 echo $C12;
+echo "<br>";
 echo $John;
+echo "<br>";
 echo $Hilton;
 // echo $Hilton->afficherReservations();

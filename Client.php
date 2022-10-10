@@ -34,15 +34,5 @@ class Client {
     }
 
     //FONCTIONS
-    public function ajouterReservation(Reservation $r) {
-        $this->reservations[] = $r;
-    }
-    public function afficherReservations() {
-        $result = "<h3>Réservations de $this</h3>";
-        $result .= count($this->reservations)." réservations<br/>";
-        foreach($this->reservations as $resa) {
-            $result .= "$resa<br/>";
-        }
-        return $result;
-    }
+    
 }

@@ -36,12 +36,12 @@ class Hotel {
     }
 
 
-    // public function getReservation() : array {
-    //     return $this->reservations;
-    // }
-    // public static function getChambre() : array {
-    //     return self::$_chambre;
-    // }
+    public function getReservation() {
+        return $this->reservations;
+    }
+    public static function getChambre() {
+        return self::$_chambre;
+    }
 
     //SETTER
     public function setName(string $NewName) {
@@ -61,39 +61,4 @@ class Hotel {
     public function __toString(){
         return $this->_name;
     }
-
-    //FONCTIONS
-    public function ajouterChambre(Chambre $c) {
-        $this->chambres[] = $c;
-    }
-
-    public function ajouterReservation(Reservation $r) {
-        $this->reservations[] = $r;
-    }
 }
-//     public function afficherReservations() : string {
-//         $result = "<h4>Réservations de l'hôtel $this</h4>";
-//         if(count($this->_reservation) == 0){
-//             $result .=  "Aucune réservation !<br/>";
-//         } else {
-//             echo count($this->_reservation)." réservations<br/>";
-//             foreach($this->_reservation as $resa) {
-//                 $result .= $resa->getClient()." 
-//                                 - Chambre ".$resa->getChambre()->getNumero()." - 
-//                                 du ".$resa->getDateDebut()->format("d-m-Y")." 
-//                                 au ".$resa->getDateFin()->format("d-m-Y")."<br/>";
-//             }
-//         }
-//         return $result;
-//     }
-
-//     public function getInfos() : string {
-//         $nbChambres = count($this->getChambre());
-//         $nbResa = count($this->getReservation());
-//         $nbLibres = $nbChambres - $nbResa; 
-//         return "<h3 class='uk-margin-remove-bottom'>$this</h3>".$this->getAdresse()."<br/>
-//                     Nombre de chambres : ".$nbChambres."<br/>
-//                     Nombre de chambres réservées : ".$nbResa."<br/>
-//                     Nombre de chambres dispo : ".$nbLibres;
-//     }
-// }

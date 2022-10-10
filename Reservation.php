@@ -12,8 +12,6 @@
             $this->_dateDebut = new DateTime($dateDebut);
             $this->_dateFin = new DateTime($dateFin);
             $hotel = $chambre->getHotel();
-            $hotel->ajouterReservation($this);
-            $client->ajouterReservation($this);
         }
 
         //GETTER
