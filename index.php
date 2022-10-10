@@ -51,12 +51,25 @@ $Chambre4= new Chambre($Hilton, "4", 1, TRUE, 120);
 // RESERVATION
 $reservation1 = new Reservations ($Micka, $Chambre3,"15-01-2023","16-01-2023");
 // TEST
-// echo $Chambre4;
+ echo $Chambre4;
 // echo "<br>";
 // echo $Micka;
 // echo "<br>";
 // echo $Hilton;
 // echo "<br>";
-echo $Micka->afficherReservationClient();
+// echo $Micka->afficherReservationClient();
 // echo "<br>";
 // echo $Hilton->afficherReservationsHotel();
+echo $reservation1;
+
+
+
+// classe : representation d'une chose matérielle ou immaterielle du réel. On y associe des propriétés (nom, prénom) et des méthodes (fonctions). Ensemble d'etat (propriété) et de comportements (méthodes).
+
+// objet :  un objet est une instance d'une classe.
+
+// instance : désigne une apparition d'une classe.
+
+// encapsulation : pose de limiteurs d'accès ( private :accès que dans la classe / public : accès à l'intérieur et a l'exterieur / protected : pour les classes qui heritent en plus de la classe seule).
+
+// __toString : méthode magique qui traite l'objet sous forme de chaine de caractères.

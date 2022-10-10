@@ -47,7 +47,14 @@
         public function setDateFin(DateTime $NewDateFin)  {
             $this->_dateFin = $NewDateFin;
         }
-
+        // FONCTION CUSTOM
+        public function AfficherReservationClient() {
+            $result = "<h2> Réservation de ".$this->client->getUsername()." ".$this->client->getName()."</h2> ";
+            foreach ($this->_reservations as $reservations) {
+                return " Hotel :".$this->hotel-> $result .= $reservations->getChambre(); 
+            }
+            return $result;
+        }
 
         //TO STRING
         public function __toString(){

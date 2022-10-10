@@ -35,7 +35,7 @@ class Client {
 
     //FONCTIONS
 
-    public function AfficherReservationClient() {
+    public function AfficherReservation() {
         $result = "<h2> Réservation de ".$this->getUsername()." ".$this->getName()."</h2> ";
         foreach ($this->_reservations as $reservations) {
             $result .= $reservations->getChambre(); 
