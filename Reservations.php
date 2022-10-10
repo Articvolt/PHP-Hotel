@@ -2,12 +2,16 @@
 // Collection -> mettre toujours au pluriel
 
     class Reservations {
+
+
         private Client $_client;
         private Chambre $_chambre;
         private DateTime $_dateDebut;
         private DateTime $_dateFin;
         
         public function __construct(Client $client, Chambre $chambre, string $dateDebut, string $dateFin ) {
+            
+            
             $this->_client = $client;
             $this->_chambre = $chambre;
             $this->_dateDebut = new DateTime($dateDebut);
@@ -28,6 +32,8 @@
         public function getDateFin() {
             return $this->dateFin;
         }
+
+        
         //SETTER
         public function setClient(string $NewClient) {
             $this->_client = $NewClient;
