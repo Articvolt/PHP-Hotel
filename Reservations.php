@@ -16,7 +16,7 @@
             $this->_chambre = $chambre;
             $this->_dateDebut = new DateTime($dateDebut);
             $this->_dateFin = new DateTime($dateFin);
-            $hotel = $chambre->getHotel();
+            
         }
 
         //GETTER
@@ -33,7 +33,7 @@
             return $this->dateFin;
         }
 
-        
+
         //SETTER
         public function setClient(string $NewClient) {
             $this->_client = $NewClient;
