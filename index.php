@@ -32,7 +32,7 @@
 <?php
 
 spl_autoload_register(function ($class_name) {  //fonction autoloader en PHP, facilite quand plusieurs classes
-    require $class_name . '.php';
+    require 'class/' . $class_name . '.php';
 });
 
 // HOTEL
@@ -41,22 +41,22 @@ $Hilton = new Hotel("Hilton **** Strasbourg","10 route de la gare","67000 STRASB
 $Regent = new Hotel("Regent *** Paris", "61 rue Dauphine","75006 PARIS",35);
 
 // CLIENT
-$John= new Client("Micka","MURMANN","15-01-2023","16-01-2023");
-$Jane= new Client("Virgile","GIBELLO","18-02-2023","24-02-2023");
+$Micka= new Client("Micka","MURMANN");
+$Virgile= new Client("Virgile","GIBELLO");
 
 // CHAMBRE
-$C12= new Chambre($Hilton, "3", 2, TRUE, 120);
-$C15= new Chambre($Hilton, "4", 1, TRUE, 120);
+$Chambre3= new Chambre($Hilton, "3", 2, TRUE, 120);
+$Chambre4= new Chambre($Hilton, "4", 1, TRUE, 120);
 
 // RESERVATION
-
+$reservation1 = new Reservations ($Micka, $Chambre3,"15-01-2023","16-01-2023");
 // TEST
-echo $C12;
-echo "<br>";
-echo $John;
-echo "<br>";
-echo $Hilton;
-echo "<br>";
-echo $John->afficherReservationClient();
-echo "<br>";
-echo $Hilton->afficherReservationsHotel();
+// echo $Chambre4;
+// echo "<br>";
+// echo $Micka;
+// echo "<br>";
+// echo $Hilton;
+// echo "<br>";
+echo $Micka->afficherReservationClient();
+// echo "<br>";
+// echo $Hilton->afficherReservationsHotel();
