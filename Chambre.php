@@ -61,7 +61,7 @@
         
         //TO STRING
         public function __toString() {
-            return $this->_num." (".$this->_nbrBed." lits - ".$this->_price." € - Wifi : ".$this->getWifi().")";
+            return $this->_num." (".$this->_nbrBed." lits - ".$this->_price." € - ".$this->getWifi().")";
         }
     }
     // raccourcis clavier 0128 + Alt : €
