@@ -29,10 +29,17 @@ class Client {
     }
 
     //TO STRING
-    public function __toString(){
+    public function __toString() {
         return "$this->_username $this->_name";
     }
 
     //FONCTIONS
 
+    public function AfficherReservationClient() {
+        $result = "<h2> Réservation de ".$this->getUsername()." ".$this->getName()."</h2> ";
+        foreach ($this->_reservations as $reservations) {
+            $result .= $reservations->getChambre(); 
+        }
+        return $result;
+    }
 }

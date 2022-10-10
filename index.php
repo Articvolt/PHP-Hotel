@@ -56,4 +56,7 @@ echo "<br>";
 echo $John;
 echo "<br>";
 echo $Hilton;
-// echo $Hilton->afficherReservations();
+echo "<br>";
+echo $John->afficherReservationClient();
+echo "<br>";
+echo $Hilton->afficherReservationsHotel();
