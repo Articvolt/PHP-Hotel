@@ -61,6 +61,11 @@ class Hotel {
     public function __toString(){
         return $this->_name;
     }
+    
+    // Ajouter chambre à l'hotel
+    public function AjouterChambres($NewChambre) {
+        $this->_chambre[] =$NewChambre;
+    } 
 
     public function AfficherReservationsHotel() {
         $result = "<h2> Reservations de l'hôtel ". $this->_name."</h2>";
@@ -69,4 +74,5 @@ class Hotel {
         }
         return $result;
     } 
+
 }

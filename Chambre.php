@@ -17,6 +17,9 @@
             $this->_price = $price;
             $this->_wifi = $wifi;
             $this->_reservations = [];
+
+            // ajoute l'hotel à la chambre
+            $hotel->AjouterChambres($this);
         }
 
         //GETTER
