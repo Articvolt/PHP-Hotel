@@ -57,11 +57,13 @@ $reservation0 = new Reservation ($Micka, $Chambre4, $Hilton, "11-01-2023","14-01
 // echo $Micka;
 // echo "<br>";
 // echo $Hilton->AfficherListeChambre();
+// echo "<br>";
+// echo $reservation1;
+// echo "<br>";
 // echo $Hilton;
 // echo "<br>";
 echo $Micka->afficherReservationClient();
 echo "<br>";
 echo $Hilton->afficherReservationsHotel();
 echo "<br>";
-// echo $reservation1;
-// echo $Hilton->AfficherDescriptionHotel();
+echo $Hilton->AfficherDescriptionHotel();

@@ -79,7 +79,7 @@ class Hotel {
     public function AfficherListeChambre() {
         echo "<h2>".$this->name."</h2>";
         foreach ($this->chambres as $chambre) {
-            echo $chambre;
+            echo $chambre."<br>";
         }
     }
 
