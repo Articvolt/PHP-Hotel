@@ -3,14 +3,14 @@
     class Chambre {
 
 
-        private Hotel $hotel;
+        private $hotel;
         private int $num;
         private int $nbrBed;
         private bool $wifi;
         private float $price;
         private array $reservations;
 
-        public function __construct(Hotel $hotel, string $num, int $nbrBed, bool $wifi, int $price) {
+        public function __construct(hotel $hotel, string $num, int $nbrBed, bool $wifi, int $price) {
             $this->name = $hotel;
             $this->num= $num;
             $this->nbrBed = $nbrBed;

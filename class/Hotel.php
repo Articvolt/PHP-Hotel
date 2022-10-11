@@ -5,6 +5,8 @@ class Hotel {
     private string $adress;
     private string $city;
     private int $nbrChambre;
+
+    // tableau
     private array $chambres;
     private array $reservations;
 
@@ -14,6 +16,8 @@ class Hotel {
         $this->adress = $adress;
         $this->city = $city;
         $this->nbrChambre = $nbrChambre;
+        
+        //tableau
         $this->chambres= [];
         $this->reservations = [];
     }
@@ -34,14 +38,13 @@ class Hotel {
     public function getAdresse() {
         return $this->adress . $this->city;
     }
-
-
     public function getReservation() {
         return $this->reservations;
     }
     public static function getChambres() {
         return self::$chambres;
     }
+
 
     //SETTER
     public function setName(string $NewName) {
@@ -57,19 +60,29 @@ class Hotel {
         $this->nbrChambre = $NewNbrChambre;
     }
 
+
     //TO STRING
     public function __toString(){
         return $this->name;
     }
     
-    // Ajouter chambre à l'hotel
+    // LISTE DES CHAMBRES
     public function AjouterChambres($chambre) {
         $this->chambres[] =$chambre;
     } 
+    // AFFICHAGE LISTE DES CHAMBRES D UN HOTEL
+    public function AfficherListeChambre() {
+        echo "<h2>".$this->name."</h2>";
+        foreach ($this->chambres as $chambre) {
+            echo $chambre;
+        }
+    }
+
+    // LISTE DES RESERVATIONS
     public function AjouterReservation($reservation){
         $this->reservations[]= $reservation;
     }
-
+    // AFFICHAGE LISTE DES RESERVATIONS D UN HOTEL
     public function AfficherReservationsHotel() {
         echo "<h2> Reservations de l'hôtel ". $this->name."</h2>";
         foreach ($this->reservations as $reservation) {
