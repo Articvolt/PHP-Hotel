@@ -83,16 +83,19 @@ class Hotel {
         }
     }
 
+
     // LISTE DES RESERVATIONS
     public function AjouterReservation($reservation){
         $this->reservations[]= $reservation;
     }
+
     // AFFICHAGE LISTE DES RESERVATIONS D UN HOTEL
     public function AfficherReservationsHotel() {
-        echo "<h2> Reservations de l'hôtel ". $this->name."</h2>";
+        $result = "<h2> Reservations de l'hôtel ". $this->name."</h2>";
         foreach ($this->reservations as $reservation) {
-            return $reservation->getClient()." - ".$reservation->getChambre()." - ".$reservation->getDates();
-        }   
+            $result .= $reservation->getClient()." - ".$reservation->getChambre()." - ".$reservation->getDates()."<br>";
+        }  
+        return $result; 
     } 
 
 }
