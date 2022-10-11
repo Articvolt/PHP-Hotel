@@ -37,7 +37,7 @@ spl_autoload_register(function ($class_name) {  //fonction autoloader en PHP, fa
 
 // HOTEL
 
-$Hilton = new Hotel("Hilton **** Strasbourg","10 route de la gare","67000 STRASBOURG",40);
+$Hilton = new Hotel("Hilton **** Strasbourg","10 route de la Gare","67000 STRASBOURG",40);
 $Regent = new Hotel("Regent *** Paris", "61 rue Dauphine","75006 PARIS",35);
 
 // CLIENT
@@ -64,3 +64,4 @@ echo "<br>";
 // echo $Hilton->afficherReservationsHotel();
 // echo "<br>";
 // echo $reservation1;
+echo $Hilton->AfficherDescriptionHotel();

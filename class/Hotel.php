@@ -16,7 +16,7 @@ class Hotel {
         $this->adress = $adress;
         $this->city = $city;
         $this->nbrChambre = $nbrChambre;
-        
+
         //tableau
         $this->chambres= [];
         $this->reservations = [];
@@ -36,7 +36,7 @@ class Hotel {
         return $this->nbrChambre;
     }
     public function getAdresse() {
-        return $this->adress . $this->city;
+        return $this->adress." ".$this->city;
     }
     public function getReservation() {
         return $this->reservations;
@@ -64,6 +64,10 @@ class Hotel {
     //TO STRING
     public function __toString(){
         return $this->name;
+    }
+    // AFFICHAGE DESCRIPTION HOTEL
+    public function AfficherDescriptionHotel() {
+        echo "<h2>".$this->name."</h2>".$this->getAdresse();
     }
     
     // LISTE DES CHAMBRES
