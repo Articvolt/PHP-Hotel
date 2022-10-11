@@ -38,6 +38,9 @@
         public function getDateFin() {
             return $this->dateFin;
         }
+        public function getDates() {
+            return " du ".$this->dateDebut->format("d-m-Y")." au ".$this->dateFin->format("d-m-Y");
+        }
 
 
         //SETTER

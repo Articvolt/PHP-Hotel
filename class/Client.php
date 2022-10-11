@@ -42,7 +42,7 @@ class Client {
     public function AfficherReservationClient() {
         $result = "<h2> Réservation de ".$this->getUsername()." ".$this->getName()."</h2> ";
         foreach ($this->reservations as $reservations) {
-            $result .= $reservations->getChambre() . $reservations->getDateDebut(). $reservations->getDateFin(); 
+            $result .= $reservations->getChambre().$reservations->getDates()->format("d-m-Y"); 
         }
         return $result;
     }

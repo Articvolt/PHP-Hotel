@@ -65,6 +65,7 @@ class Hotel {
     public function __toString(){
         return $this->name;
     }
+
     // AFFICHAGE DESCRIPTION HOTEL
     public function AfficherDescriptionHotel() {
         echo "<h2>".$this->name."</h2>".$this->getAdresse();
@@ -90,9 +91,8 @@ class Hotel {
     public function AfficherReservationsHotel() {
         echo "<h2> Reservations de l'hôtel ". $this->name."</h2>";
         foreach ($this->reservations as $reservation) {
-            return $reservation->getClient()." chambre ".$reservation->getChambre();
-        }
-        
+            return $reservation->getClient()." - ".$reservation->getChambre()." - ".$reservation->getDates();
+        }   
     } 
 
 }
