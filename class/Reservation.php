@@ -38,6 +38,9 @@
         public function getDateFin() {
             return $this->dateFin;
         }
+        public function getHotel() {
+            return $this->hotel;
+        }
         public function getDates() {
             return " du ".$this->dateDebut->format("d-m-Y")." au ".$this->dateFin->format("d-m-Y");
         }
@@ -56,6 +59,8 @@
         public function setDateFin(DateTime $NewDateFin)  {
             $this->dateFin = $NewDateFin;
         }
+
+        
         // FONCTION CUSTOM
         public function AfficherReservationClient() {
             $result = "<h2> Réservation de ".$this->client->getUsername()." ".$this->client->getName()."</h2> ";
@@ -63,6 +68,11 @@
                 return " Hotel :".$this->hotel->getName(). $result .= $reservations->getChambre(); 
             }
             return $result;
+        }
+
+        //AFFICHER DESCRIPTION CHAMBRE
+        public function AfficherDescriptionChambre() {
+            return " (".$this->chambre->getNbrBed()." lits - ".$this->chambre->getPrice()." € - ".$this->chambre->getWifi().")";
         }
 
         //TO STRING

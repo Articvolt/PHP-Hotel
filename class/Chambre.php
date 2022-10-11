@@ -66,11 +66,15 @@
             $this->reservations[]= $reservation;
         }
     
+
         //TO STRING
         public function __toString() {
             return " chambre ".$this->num;
         } 
+
+        //AFFICHER DESCRIPTION CHAMBRE
+        public function AfficherDescriptionChambre() {
+            return " (".$this->nbrBed." lits - ".$this->price." € - ".$this->getWifi();
+        }
     }
     // raccourcis clavier 0128 + Alt : €
-
-    // ." (".$this->nbrBed." lits - ".$this->price." € - ".$this->getWifi().")<br>"
