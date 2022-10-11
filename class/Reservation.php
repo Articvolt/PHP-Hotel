@@ -11,7 +11,7 @@
         private Hotel $hotel;
     
         
-        public function __construct(Client $client, Chambre $chambre, Hotel $hotel,string $dateDebut, string $dateFin ) {
+        public function __construct(Client $client, Chambre $chambre, Hotel $hotel, string $dateDebut, string $dateFin ) {
             
             
             $this->client = $client;

@@ -73,7 +73,7 @@ class Hotel {
     public function AfficherReservationsHotel() {
         echo "<h2> Reservations de l'hôtel ". $this->name."</h2>";
         foreach ($this->reservations as $reservation) {
-            return $reservation->getClient()." ".$reservation->getChambre();
+            return $reservation->getClient()." chambre ".$reservation->getChambre();
         }
         
     } 
